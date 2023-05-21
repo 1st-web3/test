@@ -34,7 +34,7 @@ function addNodeToTable(nodeName, nodeAddress) {
   const deleteBtn = document.createElement('button');
   deleteBtn.textContent = 'Del';
   deleteBtn.addEventListener('click', () => {
-    table.deleteRow(newRow.rowIndex -1);
+    table.deleteRow(newRow.rowIndex - 1);
     deleteNodeFromStorage(nodeAddress);
   });
   deleteCell.appendChild(deleteBtn);
@@ -72,7 +72,6 @@ function getTimeSinceLastTransaction(nodeAddress, callback) {
   });
 }
 
-
 // Function update time since last transaction
 function updateTimes() {
   const rows = table.rows;
@@ -96,7 +95,7 @@ form.addEventListener('submit', (event) => {
   // Check if nodeAddress is blank or not a valid address
   const validAddressRegex = /^0x[a-fA-F0-9]{40}$/;
   if (nodeAddress === '' || !validAddressRegex.test(nodeAddress)) {
-    alert('Please enter a valid Boxberg wallet address.');
+    alert('Please enter a valid Bloxberg wallet address.');
     return;
   }
 
