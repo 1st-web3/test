@@ -21,10 +21,6 @@ body {
   margin: 10px;
 }
 
-h1 {
-  text-align: center;
-}
-
 form label {
   display: block;
   margin-bottom: 5px;
@@ -65,22 +61,7 @@ table th {
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-<body>
-  <div class="container">
-    <h1>Ethernity Cloud Node Monitoring</h1>
-    <table id="nodes-table">
-      <thead>
-        <tr>
-          <th style="width: 40%;">Node Name</th>
-          <th style="width: 50%;">Node Address</th>
-          <th style="width: 10%;">Last Call</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- rows will be dynamically added here -->
-      </tbody>
-    </table>
-    <form>
+<form>
       <div class="form-input">
         <label for="node-name">Node Name:</label>
         <input type="text" id="node-name" name="node-name">
@@ -92,6 +73,22 @@ table th {
       <br>
       <button type="submit" id="add-node">Add Node</button>
     </form>
+
+<body>
+  <div class="container">
+
+    <table id="nodes-table">
+      <thead>
+        <tr>
+          <th style="width: 40%;">Node Name</th>
+          <th style="width: 50%;">Node Address</th>
+          <th style="width: 10%;">Last Call</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- rows will be dynamically added here -->
+      </tbody> 
+    </table>
   </div>
 
   <script src="script.js"></script>
