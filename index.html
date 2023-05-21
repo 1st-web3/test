@@ -2,82 +2,90 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>Nodes Monitor</title>
   <link rel="shortcut icon" type="image/png" href="https://avatars.githubusercontent.com/u/66076991?v=4">
   <style>
-    .red-text {
-      color: red;
-    }
+      
+      .red-text {color: red;}
 
-    body {
-      background-image: url("https://media.istockphoto.com/id/505487687/de/vektor/vektor-abstrakte-wertvolle-metallic-hintergrund-mit-curve.jpg?b=1&s=170667a&w=0&k=20&c=im7gmoIb0IjKMNNfRC7NdgTlTs1mU1o6zBqx-QjEwxE=");
-      background-attachment: fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-    }
+body {background-image: url("https://media.istockphoto.com/id/505487687/de/vektor/vektor-abstrakte-wertvolle-metallic-hintergrund-mit-curve.jpg?b=1&s=170667a&w=0&k=20&c=im7gmoIb0IjKMNNfRC7NdgTlTs1mU1o6zBqx-QjEwxE=");
+        background-attachment: fixed;
+        background-size: cover;}
 
-    form label {
-      display: block;
-      margin-bottom: 4px;
-    }
 
-    form input[type="text"] {
-      width: 300px;
-      padding: 4px;
-      border: 1px solid #ccc;
-      background-color: #4CAF50;
-    }
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0px;
+}
 
-    form button[type="submit"] {
-      padding: 15px 50px;
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
+form label {
+  display: block;
+  margin-bottom: 4px;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+form input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+ background-color: #6fa8dc;
+}
 
-    table th,
-    table td {
-      padding: 8px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-      color: #000000; /* culoarea textului */
-    }
+form button[type="submit"] {
+  padding:15px 50px;
+  background-color: #1668b4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
 
-    table th {
-      background-color: #062a4b;
-    }
-  </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+}
+
+table th, table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #062a4b;
+}
+
+table th {
+  background-color: #062a4b;
+}
+    </style>
+
 </head>
 
-<body>
-  <div class="container">
-    <form>
-      <table id="nodes-table">
-        <thead>
-          <tr>
-            <th style="width: 40%;"><input type="text" id="node-name" name="node-name" placeholder="Node Name"></th>
-            <th style="width: 50%;"><input type="text" id="node-address" name="node-address" placeholder="Node Address"></th>
-            <th style="width: 10%;">Last Call</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- alte rânduri vor fi adăugate dinamic aici -->
-        </tbody>
-      </table>
+<form>
+      <div class="form-input">
+        <input type="text" id="node-name" name="node-name" placeholder="Node Name">
+      </div>
+      <div class="form-input">
+        <input type="text" id="node-address" name="node-address" placeholder="Node Address">
+      </div>
       <br>
       <button type="submit" id="add-node">Add Node</button>
     </form>
+
+<body>
+  <div class="container">
+
+    <table id="nodes-table">
+      <thead>
+        <tr>
+          <th style="width: 40%;">Node Name</th>
+          <th style="width: 50%;">Node Address</th>
+          <th style="width: 10%;">Last Call</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- rows will be dynamically added here -->
+      </tbody> 
+    </table>
   </div>
 
   <script src="script.js"></script>
