@@ -72,10 +72,6 @@ function getTimeSinceLastTransaction(nodeAddress, callback) {
   });
 }
 
-newTransactionTimeCell.textContent = node.last_transaction_time || "Last hour";
-          if (node.last_transaction_time > 20) {
-            newTransactionTimeCell.classList.add("red-text");
-          }
 
 // Function update time since last transaction
 function updateTimes() {
