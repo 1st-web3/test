@@ -28,14 +28,14 @@ form label {
 
 form input[type="text"] {
   width: 300px;
-  padding: 10px;
+  padding: 4px;
   border: 1px solid #ccc;
- background-color: #6fa8dc;
+ background-color: #4CAF50;
 }
 
 form button[type="submit"] {
   padding:15px 50px;
-  background-color: #1668b4;
+  background-color: #4CAF50;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -50,7 +50,7 @@ table {
 table th, table td {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #062a4b;
+  border-bottom: 1px solid #ddd;
 }
 
 table th {
@@ -58,13 +58,16 @@ table th {
 }
     </style>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <form>
       <div class="form-input">
+        <label for="node-name"></label>
         <input type="text" id="node-name" name="node-name" placeholder="Node Name">
       </div>
       <div class="form-input">
+        <label for="node-address"></label>
         <input type="text" id="node-address" name="node-address" placeholder="Node Address">
       </div>
       <br>
